@@ -4,6 +4,12 @@
 # list with even numbers
 # make listnode with a value and next pointer
 
+
+# Definition for singly-linked list.
+
+oddList = [1,2,3,4,5,6,7]
+evenList = [1,2,3,4,5,6,7,8]
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):
@@ -12,18 +18,34 @@ class ListNode:
 
 # Singly
 
-class Solution:
+# class Solution:
+#     def middleNode(self, head: ListNode) -> ListNode:
+#         node = head
+#         new_list = []
+#         while node != None:
+#             new_list.append(node)
+#             node = node.next
+#         length = len(new_list)
+#         middle_index = length // 2  
+#         middle_node = new_list[middle_index]
+#         return middle_node
+
+
+# Doubly
+
+class Solution: 
     def middleNode(self, head: ListNode) -> ListNode:
         node = head
-        new_list = []
+        node_total = 0
+        middle_node = 
         while node != None:
-            new_list.append(node)
             node = node.next
-        length = len(new_list)
-        middle_index = length // 2  
-        middle_node = new_list[middle_index]
-        return middle_node
+            node_total += 1
 
-
-
+        middle_index = node_total // 2
+        new_node = head
+        for i in range(0, middle_index + 1):
+            new_node = new_node.next
+            middle_node = new_node 
+            return middle_node
     
